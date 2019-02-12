@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,14 +44,30 @@ public class MainActivity extends AppCompatActivity {
 
                 if(!text.equals( ""))
                 {
-                    ClipData clipData = ClipData.newPlainText("text", text);
+                    ClipData clipData = ClipData.("text", text);
                     clipboardManager.setPrimaryClip(clipData);
 
+
+                    Toast.makeText(MainActivity.this,"Copied",Toast.LENGTH_SHORT ).show();
+                    btn_paste.setEnabled(true);
                 }
             }
         });
 
 
+        btn_paste.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ClipData clipData = clipboardManager.getPrimaryClip();
+                ClipData.Item item = clipData.getItemAt(0);
+
+
+                txttext.setText(item.getText().toString());
+
+                Toast.makeText(MainActivity.this,"Pasted",Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
     }
 }
