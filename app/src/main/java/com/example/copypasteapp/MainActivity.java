@@ -44,8 +44,10 @@ public class MainActivity extends AppCompatActivity {
 
                 if(!text.equals( ""))
                 {
-                    ClipData clipData = ClipData.("text", text);
+                    ClipData clipData = ClipData.newPlainText("text", text);
                     clipboardManager.setPrimaryClip(clipData);
+
+                    ClipData clipData1 = ClipData.n
 
 
                     Toast.makeText(MainActivity.this,"Copied",Toast.LENGTH_SHORT ).show();
