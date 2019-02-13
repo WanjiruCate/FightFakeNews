@@ -5,6 +5,7 @@ import android.content.ClipboardManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     TextView txttext;
     EditText ettext;
     ClipboardManager clipboardManager;
+    WebView myWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         btn_paste = findViewById(R.id.btn_paste);
         txttext = findViewById(R.id.textDisplay);
         ettext = findViewById(R.id.textWrite);
+        myWebView = findViewById(R.id.mywebview);
 
         clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
 
@@ -44,10 +47,14 @@ public class MainActivity extends AppCompatActivity {
 
                 if(!text.equals( ""))
                 {
+                   // ClipData clipData = ClipData.newPlainText("text", text);
+                    //clipboardManager.setPrimaryClip(clipData);
+
+
                     ClipData clipData = ClipData.newPlainText("text", text);
                     clipboardManager.setPrimaryClip(clipData);
 
-                    ClipData clipData1 = ClipData.n
+
 
 
                     Toast.makeText(MainActivity.this,"Copied",Toast.LENGTH_SHORT ).show();
@@ -63,8 +70,9 @@ public class MainActivity extends AppCompatActivity {
                 ClipData clipData = clipboardManager.getPrimaryClip();
                 ClipData.Item item = clipData.getItemAt(0);
 
+                myWebView.loadUrl("https://see-the-light.herokuapp.com/news/get?link="+ item.getText().toString());
 
-                txttext.setText(item.getText().toString());
+               // txttext.setText(item.getText().toString());
 
                 Toast.makeText(MainActivity.this,"Pasted",Toast.LENGTH_SHORT).show();
 

@@ -9,13 +9,14 @@
     android:layout_margin="8dp">
 
 
+
     <EditText
         android:id="@+id/textWrite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:ems="10"
@@ -56,4 +57,12 @@
         android:layout_height="wrap_content"
         android:text="Pasted Text appear here"
         />
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mywebview"
+            android:autofillHints="Data from Api endpoints">
+
+        </WebView>
+
 </LinearLayout>
