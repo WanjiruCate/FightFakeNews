@@ -10,7 +10,7 @@
 
 
 
-    <EditText
+    <TextView
         android:id="@+id/textWrite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,8 +20,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:ems="10"
-        android:hint="Enter text to copy"
-        android:inputType="textMultiLine"
+        android:text="Click verify to verify the pasted link"
+
 
         />
     <LinearLayout
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_margin="16dp">
-
+<!--
     <Button
         android:id="@+id/btn_copy"
         android:layout_width="wrap_content"
@@ -38,7 +38,7 @@
         android:layout_marginBottom="8dp"
         android:text="Copy"
         android:layout_margin="16dp"
-        />
+        />-->
 
         <Button
             android:id="@+id/btn_paste"
@@ -46,7 +46,7 @@
             android:layout_marginBottom="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Paste"
+            android:text="Verify"
             android:layout_margin="16dp"/>
 
     </LinearLayout>
@@ -55,7 +55,7 @@
         android:layout_margin="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pasted Text appear here"
+        android:text="Verified Results appear here"
         />
         <WebView
             android:layout_width="match_parent"

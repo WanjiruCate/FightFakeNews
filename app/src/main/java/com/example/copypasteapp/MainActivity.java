@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btn_copy,btn_paste;
     TextView txttext;
-    EditText ettext;
+    TextView ettext;
     ClipboardManager clipboardManager;
     WebView myWebView;
 
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        btn_copy.setOnClickListener(new View.OnClickListener() {
+     /*   btn_copy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     btn_paste.setEnabled(true);
                 }
             }
-        });
+        });*/
 
 
         btn_paste.setOnClickListener(new View.OnClickListener() {
