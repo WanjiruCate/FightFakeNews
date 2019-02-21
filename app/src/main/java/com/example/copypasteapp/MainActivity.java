@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn_copy = findViewById(R.id.btn_copy);
+        //btn_copy = findViewById(R.id.btn_copy);
         btn_paste = findViewById(R.id.btn_paste);
         txttext = findViewById(R.id.textDisplay);
         ettext = findViewById(R.id.textWrite);
